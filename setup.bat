@@ -14,13 +14,13 @@ if errorlevel 1 (
 REM Create virtual environment
 if not exist venv (
     echo [INFO] Creating virtual environment...
-    python -m venv venv
+    python -m venv .venv
 ) else (
     echo [INFO] Virtual environment already exists.
 )
 
 REM Activate venv
-call venv\Scripts\activate
+call .venv\Scripts\activate.bat
 
 REM Install requirements
 if exist requirements.txt (
